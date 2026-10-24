@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI/UX Designer Internship Application</title>
+  <link rel="stylesheet" href="form.css">
+  <script src="form.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="logo"><span>U</span> DesignCareers</a>
+  </header>
+
+  <main class="page">
+    <section class="intro">
+      <span class="tag">CAREER OPPORTUNITY</span>
+      <h1>UI/UX Designer <span>Internship</span></h1>
+      <p class="subtitle">
+        Turn your creative ideas into meaningful digital experiences.
+        Join our design team and build products people love.
+      </p>
+
+      <div class="highlights">
+        <div class="highlight">
+          <span class="highlight-icon">⌘</span>
+          <div><strong>UI/UX Design</strong><small>Internship role</small></div>
+        </div>
+        <div class="highlight">
+          <span class="highlight-icon">◷</span>
+          <div><strong>3 Months</strong><small>Duration</small></div>
+        </div>
+        <div class="highlight">
+          <span class="highlight-icon">⌂</span>
+          <div><strong>Remote</strong><small>Work from home</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="form-card" id="application">
+      <div class="form-heading">
+        <div>
+          <span class="eyebrow">YOUR NEXT CHAPTER</span>
+          <h2>Internship Application</h2>
+          <p>Fill in your details to apply for this opportunity.</p>
+        </div>
+        <span class="form-icon">✳</span>
+      </div>
+
+      <div class="progress-area">
+        <div class="progress-label">
+          <span>Application form</span>
+          <span id="progressText">0% completed</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <form id="applicationForm">
+        <fieldset>
+          <legend><span>01</span> Personal Information</legend>
+          <div class="form-grid">
+            <div class="field">
+              <label for="fullName">Full Name <b>*</b></label>
+              <input id="fullName" name="fullName" type="text"
+                     placeholder="Enter your full name" required
+                     minlength="2" autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="email">Email Address <b>*</b></label>
+              <input id="email" name="email" type="email"
+                     placeholder="you@example.com" required
+                     autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="phone">Phone Number <b>*</b></label>
+              <input id="phone" name="phone" type="tel"
+                     placeholder="10-digit mobile number"
+                     pattern="[0-9]{10}" maxlength="10" required
+                     inputmode="numeric" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="location">Current Location <b>*</b></label>
+              <input id="location" name="location" type="text"
+                     placeholder="City, State" required>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span>02</span> Education Details</legend>
+          <div class="form-grid">
+            <div class="field">
+              <label for="education">Highest Qualification <b>*</b></label>
+              <select id="education" name="education" required>
+                <option value="">Select qualification</option>
+                <option>Class 12 / Higher Secondary</option>
+                <option>Diploma</option>
+                <option>Bachelor's Degree</option>
+                <option>Master's Degree</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="college">College / Institution <b>*</b></label>
+              <input id="college" name="college" type="text"
+                     placeholder="Enter institution name" required>
+            </div>
+            <div class="field">
+              <label for="year">Graduation Year</label>
+              <select id="year" name="year">
+                <option value="">Select year</option>
+                <option>2026</option>
+                <option>2027</option>
+                <option>2028</option>
+                <option>2029</option>
+                <option>2030</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="experience">Design Experience <b>*</b></label>
+              <select id="experience" name="experience" required>
+                <option value="">Select experience</option>
+                <option>Beginner</option>
+                <option>Personal projects</option>
+                <option>Academic projects</option>
+                <option>Previous internship</option>
+                <option>Professional experience</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span>03</span> Design Skills</legend>
+          <div class="field">
+            <label>Tools you know <b>*</b></label>
+            <p class="field-hint">Select all that apply.</p>
+            <div class="skills">
+              <label class="skill"><input type="checkbox" name="skills" value="Figma"> Figma</label>
+              <label class="skill"><input type="checkbox" name="skills" value="Adobe XD"> Adobe XD</label>
+              <label class="skill"><input type="checkbox" name="skills" value="Photoshop"> Photoshop</label>
+              <label class="skill"><input type="checkbox" name="skills" value="Illustrator"> Illustrator</label>
+              <label class="skill"><input type="checkbox" name="skills" value="Canva"> Canva</label>
+              <label class="skill"><input type="checkbox" name="skills" value="Sketch"> Sketch</label>
+            </div>
+            <small class="error" id="skillsError" aria-live="polite"></small>
+          </div>
+
+          <div class="field space-top">
+            <label for="portfolio">Portfolio URL</label>
+            <input id="portfolio" name="portfolio" type="url"
+                   placeholder="https://yourportfolio.com">
+            <small class="field-hint">Share your portfolio, Behance, or Dribbble profile.</small>
+          </div>
+          <div class="field space-top">
+            <label for="linkedin">LinkedIn Profile</label>
+            <input id="linkedin" name="linkedin" type="url"
+                   placeholder="https://linkedin.com/in/your-profile">
+          </div>
+          <div class="field space-top">
+            <label for="resume">Upload Resume (PDF) <b>*</b></label>
+            <input id="resume" name="resume" type="file"
+                   accept=".pdf,application/pdf" required>
+            <small class="field-hint">PDF format only, maximum 5 MB.</small>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span>04</span> About You</legend>
+          <div class="field">
+            <label for="motivation">Why do you want this internship? <b>*</b></label>
+            <textarea id="motivation" name="motivation" rows="4"
+                      minlength="30" maxlength="1000"
+                      placeholder="Tell us about your interest in UI/UX design and what you hope to learn..."
+                      required></textarea>
+            <div class="character-count"><span id="charCount">0</span>/1000 characters</div>
+          </div>
+          <div class="field space-top">
+            <label for="availability">When can you start? <b>*</b></label>
+            <select id="availability" name="availability" required>
+              <option value="">Select availability</option>
+              <option>Immediately</option>
+              <option>Within 2 weeks</option>
+              <option>Within a month</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <div class="terms">
+          <label class="checkbox-line">
+            <input type="checkbox" id="consent" required>
+            <span>I confirm that the information provided is accurate and
+              agree to be contacted regarding this application. <b>*</b></span>
+          </label>
+        </div>
+
+        <button class="submit-btn" type="submit">
+          Submit Application <span>↗</span>
+        </button>
+        <p class="required-note">* Required fields</p>
+        <div id="formMessage" class="form-message" role="status"
+             aria-live="polite" hidden></div>
+      </form>
+    </section>
+
+    <footer>
+      <p>Designed for aspiring creatives.</p>
+      <a href="index.html">Back to application ↑</a>
+    </footer>
+  </main>
+
+  <!-- Application Success Popup -->
+<div class="popup-overlay" id="successPopup" role="dialog"
+     aria-modal="true" aria-labelledby="popupTitle" hidden>
+  <div class="popup-box">
+    <button type="button" class="popup-close" id="closePopup"
+            aria-label="Close popup">&times;</button>
+
+    <div class="success-icon">
+      <span>✓</span>
+    </div>
+
+    <h2 id="popupTitle">Application Submitted!</h2>
+
+    <p>
+      Thank you for applying for the UI/UX Designer Internship.
+      Your application form has been completed successfully.
+    </p>
+
+    <button type="button" class="popup-btn" id="doneBtn">
+      Done
+    </button>
+  </div>
+</div>
+</body>
+</html>
+</body>
+</html>
